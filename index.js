@@ -7,8 +7,8 @@ const fetch = require('node-fetch');
 
 const storeIdHeader = 'X-PF-Store-Id';
 const BUCKET_NAME = 'eyoung'
-const AWS_CLIENT_ID = 'AKIA2Z3RJXPR3BNXMJYF';
-const AWS_CLIENT_SECRET = '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';
+const AWS_CLIENT_ID = '*';
+const AWS_CLIENT_SECRET = '*';
 
 async function createPngFromCsv() {
 
@@ -81,12 +81,12 @@ async function generateMockups(imgUrl) {
     const fetchOptions = {
         method: 'POST',
         body: JSON.stringify(generateMockupsRequest),
-        headers: {"Authorization": "Bearer uCE3lbmsBuxIA7fUOvADwr0tpO03owDrArDX7g9d", "X-PF-Store-Id": '10124725' }
+        headers: {"Authorization": "Bearer *", "X-PF-Store-Id": '10124725' }
     }
 
     const getOptions = {
         method: 'GET',
-        headers: {"Authorization": "Bearer uCE3lbmsBuxIA7fUOvADwr0tpO03owDrArDX7g9d", "X-PF-Store-Id": '10124725' }
+        headers: {"Authorization": "Bearer *", "X-PF-Store-Id": '10124725' }
     }
     
     const mockGenResponse = await fetch('https://api.printful.com/mockup-generator/create-task/491', fetchOptions).then(res => res.json());
@@ -142,7 +142,7 @@ async function createProductVariant(mockup) {
     const fetchOptions = {
         method: 'POST',
         body: JSON.stringify(createProductVariantRequest),
-        headers: {"Authorization": "Bearer uCE3lbmsBuxIA7fUOvADwr0tpO03owDrArDX7g9d", "X-PF-Store-Id": '10124725' }
+        headers: {"Authorization": "Bearer *", "X-PF-Store-Id": '10124725' }
     }
 
     const createProductVarientResponse = await fetch('https://api.printful.com/store/products', fetchOptions).then(res => res.json())
