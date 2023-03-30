@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1333.0",
+    "convert-svg-to-png": "^0.6.4",
+    "text-to-svg": "^3.1.5"
+  }
+}
